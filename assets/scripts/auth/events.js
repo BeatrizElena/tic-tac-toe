@@ -16,11 +16,9 @@ const onSignUp = function (event) {
     .catch(ui.signUpFailure)
 }
 
-
 const addHandlers = () => {
   $('#sign-up').on('submit', onSignUp)
 }
-
 
 module.exports = {
   addHandlers
