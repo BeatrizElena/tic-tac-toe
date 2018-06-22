@@ -21,8 +21,46 @@ const signOutSuccess = function (data) {
   console.log(`signOutSuccess ran.`)
 }
 
+const changePasswordSuccess = function (data) {
+  $('#message').text('Changed password successfully')
+  $('#message').css('background-color', 'green')
+  console.log(`changePasswordSuccess ran.`)
+}
+
+const signUpFailure = function (error) {
+  $('#message').text('Error on Sign-up')
+  $('#message').css('background-color', 'red')
+  console.log(`signUpFailure ran. Error is: ${error}`)
+}
+
+const signInFailure = function (error) {
+  $('#message').text('Error on Sign-In')
+  $('#message').css('background-color', 'red')
+  console.log(`signInFailure ran. Error is: `)
+  console.log(error)
+}
+
+const changePasswordFailure = function (error) {
+  $('#message').text('Error changing password')
+  $('#message').css('background-color', 'red')
+  console.log(`changePasswordFailure ran. Error is: `)
+  console.log(error)
+}
+
+const signOutFailure = function (error) {
+  $('#message').text('Error on Sign-out')
+  $('#message').css('background-color', 'red')
+  console.log(`signOutFailure ran. Error is: `)
+  console.log(error)
+}
+
 module.exports = {
   signUpSuccess,
   signInSuccess,
-  signOutSuccess
+  signOutSuccess,
+  changePasswordSuccess,
+  signUpFailure,
+  signInFailure,
+  changePasswordFailure,
+  signOutFailure
 }
