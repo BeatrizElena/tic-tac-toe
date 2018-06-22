@@ -12,9 +12,17 @@ const signInSuccess = function (data) {
   $('#message').text('Signed in successfully')
   $('#message').css('background-color', 'green')
   console.log(`signInSuccess ran. Data is: ${data}`)
+  store.user = data.user
+}
+
+const signOutSuccess = function (data) {
+  $('#message').text('Signed out successfully')
+  $('#message').css('background-color', 'green')
+  console.log(`signOutSuccess ran.`)
 }
 
 module.exports = {
   signUpSuccess,
-  signInSuccess
+  signInSuccess,
+  signOutSuccess
 }
