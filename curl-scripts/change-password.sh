@@ -5,7 +5,7 @@
 # command to use on terminal:
 # $ TOKEN="" NEW_PASSWORD="12345" sh curl-scripts/json/sign-up.sh
 
-curl "http://tic-tac-toe.wdibos.com/change-password" \
+curl "https://tic-tac-toe-wdi.herokuapp.com//change-password" \
   --include \
   --request PATCH \
   --header "Content-Type: application/json" \

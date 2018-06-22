@@ -1,6 +1,6 @@
 # ID=2 sh curl-scripts/sign-out.sh
 
-curl "http://tic-tac-toe.wdibos.com/sign-out" \
+curl "https://tic-tac-toe-wdi.herokuapp.com//sign-out" \
   --include \
   --request DELETE \
   --header "Content-Type: application/json" \
