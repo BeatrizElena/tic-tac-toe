@@ -32,7 +32,7 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
               <li class="active">
-                <button onclick="document.getElementById('id01').style.display='block'">Sign Up</button><span class="sr-only">(current)</span>
+                <button onclick="document.getElementById('modal1').style.display='block'">Sign Up</button><span class="sr-only">(current)</span>
               </li>
               <li>
                 <button onclick="document.getElementById('id02').style.display='block'">Sign In</button>
@@ -105,8 +105,8 @@
 
       <div><!-- Div for all modals -->
       <!-- Modal for sign-up -->
-      <div id="id01" class="modal">
-        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <div id="modal1" class="modal">
+        <span onclick="document.getElementById('modal1').style.display='none'" class="close" title="Close Modal">&times;</span>
         <!-- form#sign-up.border  -->
         <form class="modal-content border" id="sign-up" action="/action_page.php">
           <div class="container">
@@ -124,7 +124,7 @@
                 <!-- <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p> -->
               </fieldset>
             <div class="clearfix">
-              <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+              <button type="button" onclick="document.getElementById('modal1').style.display='none'" class="cancelbtn">Cancel</button>
               <button type="submit" class="signupbtn">Sign Up</button>
             </div>
           </div>
@@ -177,9 +177,9 @@
     </div>
 
 <!-- Modal JAVASCRIPT to be moved to separate file -->
-<script>
+<!-- <script>
 // Get the modal
-var modal1 = document.getElementById('id01');
+var modal1 = document.getElementById('modal1');
 var modal2 = document.getElementById('id02');
 var modal3 = document.getElementById('id03');
 
@@ -188,8 +188,8 @@ window.onclick = function(event) {
     if (event.target === modal1 || event.target === modal2 || event.target === modal3) {
         modal.style.display = "none";
     }
-}
-</script>
+} -->
+<!-- </script> -->
 
     </body>
 </html>
