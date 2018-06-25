@@ -3,28 +3,137 @@
     <head>
       <title>tic-tac-toe game</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
-
       <!-- Do not add `link` tags-->
       <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-
       <!-- Do not add `script` tags-->
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+      <style>
+      .main-head {
+        grid-area: header;
+      }
+      .content {
+        grid-area: content;
+      }
+      .main-nav {
+        grid-area: nav;
+      }
+      .side {
+        grid-area: sidebar;
+      }
+      .ad {
+        grid-area: ad;
+      }
+      .main-footer {
+        grid-area: footer;
+      }
+      .wrapper {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-areas:
+          "header"
+          "nav"
+          "content"
+          "sidebar"
+          "ad"
+          "footer";
+      }
+      /* background-color: $game-board-background;
+      border: 6px solid $game-board-border;
+      color: $game-board-font-color;*/
+      .game-board {
+        background-color: rgb(131, 153 , 246);
+        border: 6px solid #2c3e50;
+        border-radius: 10px;
+        color: #fff;
+        display: grid;
+        grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+        height: 600px;
+        margin: 0 auto;
+        width: 600px;
+      }
+      .box {
+        align-items: center;
+        border: 6px solid #2c3e50;
+        border-radius: 2px;
+        display: flex;
+        font-family: Helvetica;
+        font-size: 4em;
+        font-weight: bold;
+        justify-content: center;
+      }
+      @media (min-width: 500px) {
+        .wrapper {
+          grid-template-columns: 1fr 3fr;
+          grid-template-areas:
+            "header  header"
+            "nav     nav"
+            "sidebar content"
+            "ad      footer";
+        }
+        nav ul {
+          display: flex;
+          justify-content: space-between;
+          list-style: none;
+        }
+      }
+      @media (min-width: 700px) {
+        .wrapper {
+          grid-template-columns: 1fr 4fr 1fr;
+          grid-template-areas:
+            "header header  header"
+            "nav    content sidebar"
+            "nav    content ad"
+            "footer footer  footer"
+         }
+         nav ul {
+           flex-direction: column;
+         }
+      }
+      </style>
     </head>
     <body>
-      <!-- Trigger the modals with buttons TODO: Put inside nav bar?-->
-      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#signUpModal">Sign Up</button>
+      <div class="wrapper">
+              <nav class="main-nav">
+                  <ul>
+                      <li><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#signUpModal">Sign Up</button></li>
+                      <li><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#signInModal">Sign In</button></li>
+                      <li><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#changePwdModal">Change Password</button></li>
+                      <li><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#signOutModal">Sign Out</button></li>
+                  </ul>
+                  <!-- Trigger the modals with buttons TODO: Put inside nav bar?-->
+                  <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#signUpModal">Sign Up</button> -->
+                  <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#signInModal">Sign In</button> -->
+                  <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#changePwdModal">Change Password</button> -->
+                  <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#signOutModal">Sign Out</button> -->
+              </nav>
 
-      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#signInModal">Sign In</button>
+              <header class="main-head">
+                <h1>Tic Tac Toe Game</h1>
+                <p id="message"> message to user goes here</p>
+              </header>
 
-      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#changePwdModal">Change Password</button>
+              <article class="content">
+                  <h1>Main area: Game goes here</h1>
+                  <div class="game" id="game">
+                    <div class="game-board">
+                      <div class="box" id="one"></div>
+                      <div class="box" id="two"></div>
+                      <div class="box" id="three"></div>
+                      <div class="box" id="four"></div>
+                      <div class="box" id="five"></div>
+                      <div class="box" id="six"></div>
+                      <div class="box" id="seven"></div>
+                      <div class="box" id="eight"></div>
+                      <div class="box" id="nine"></div>
+                    </div>
+                  </div>
+              </article>
+              <aside class="side">Sidebar: Players info here?</aside>
+              <div class="ad">Advertising</div>
+              <footer class="main-footer">The footer</footer>
+      </div>
 
-      <!-- Trigger the modal with a button -->
-      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#signOutModal">Sign Out</button>
-
-      <h1>Tic Tac Toe Game</h1>
-
-      <p id="message"> message to user goes here</p>
 
 
 
