@@ -1,2 +1,23 @@
-$icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
-@import '~bootstrap-sass/assets/stylesheets/bootstrap';
+// $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
+// @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+
+@import 'colors';
+@import 'flexbox';
+@import 'game-grid';
+@import 'modal';
+@import 'typography';
+@import 'theme';
+@import 'breakpoints';
+
+
+
+
+
+
+$hr-border: #f1f1f1;
+
+// /* Style the horizontal ruler */
+hr {
+  border: 1px solid $hr-border;
+  margin-bottom: 25px;
+}

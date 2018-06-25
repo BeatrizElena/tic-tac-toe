@@ -1,0 +1,57 @@
+$heading-background: rgb(255, 255, 0); //yellow
+$navbar-background: rgb(100, 100, 100);
+$wrapper-background-color: #84b1bf;
+$wrapper-background: rgba($wrapper-background-color, 1);
+$wrapper-border: #f76707;
+$wrapper-div-border: #ffa94d;
+$wrapper-div-background: #ffd8a8;
+$wrapper-color: #d9480f;
+
+// Source: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
+div {
+  box-sizing: border-box;
+
+  wrapper {
+    background-color: $wrapper-background;
+    border: 2px solid $wrapper-border;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+  wrapper > div {
+    background-color: $wrapper-div-background;
+    border: 2px solid $wrapper-div-border;
+    border-radius: 5px;
+    color: $wrapper-color;
+    flex: 1 1 200px;
+    padding: 1em;
+  }
+
+  wrapper > navbar {
+    background-color: $navbar-background;
+    flex: 1 1 1200px;
+  }
+
+  wrapper > heading {
+    background-color: $heading-background;
+    flex: 1 1 1200px;
+ }
+
+  wrapper > game {
+    flex: 1 1 800px;
+  }
+
+  wrapper > extras {
+    flex: 1 1 1200px;
+  }
+
+  wrapper > footer {
+    flex: 1 1 1200px;
+  }
+}
+
+// /* Add padding to container elements */
+.container {
+  padding: 16px;
+}

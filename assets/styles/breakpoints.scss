@@ -1,0 +1,10 @@
+@import 'breakpoint';
+@import 'colors';
+
+body {
+  @include breakpoint(tiny) {
+    background-color: $blue-gray-body;
+    margin: $vertical-margin 20px;
+    max-width: 100%;
+  }
+}

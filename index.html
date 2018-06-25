@@ -3,53 +3,193 @@
     <head>
       <title>tic-tac-toe game</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
-
       <!-- Do not add `link` tags-->
       <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-
       <!-- Do not add `script` tags-->
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Tic Tac Toe Game</h1>
-      <h2>API Token Authentication</h2>
 
-<p id="message"></p>
+    <div class="wrapper">
+        <!-- nav begins -->
+      <nav class="navbar navbar-default" id="nav-bar">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
 
-<!-- form#sign-up.border  -->
-<form class="border" id="sign-up">
-  <fieldset>
-    <legend>Sign up!</legend>
-    <input type="text" name="credentials[email]" placeholder="Email">
-    <input type="password" name="credentials[password]" placeholder="Password">
-    <input type="password" name="credentials[password_confirmation]" placeholder="Password Confirmation">
-    <input type="submit" value="Sign up!">
-  </fieldset>
-</form>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-left">
+              <img src="logo.gif" alt="logo" height="42" width="42">
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li class="active">
+                <button onclick="document.getElementById('id01').style.display='block'">Sign Up</button><span class="sr-only">(current)</span>
+              </li>
+              <li>
+                <button onclick="document.getElementById('id02').style.display='block'">Sign In</button>
+              </li>
+              <li>
+                <button onclick="document.getElementById('id03').style.display='block'">Change Password</button>
+              </li>
+              <li> <!-- Will this work in place of form below? -->
+                <button class="border" id="sign-out" value="Sign Out">Sign Out</button>
+                <!-- <form class="border" id="sign-out">
+                  <fieldset>
+                    <input type="submit" value="Sign Out">
+                  </fieldset>
+                </form> -->
+              </li>
+              <li class="dropdown border">
+                <button href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More Games<span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Crossword Puzzle</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Game of Fifteen</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+  <!-- nav ends -->
+      </div>
 
-<form class="border" id="sign-in">
-  <fieldset>
-    <legend>Sign in</legend>
-    <input type="text" name="credentials[email]" placeholder="Email">
-    <input type="password" name="credentials[password]" placeholder="Password">
-    <input type="submit" value="Sign in">
-  </fieldset>
-</form>
+      <div class="heading" id="heading">
+        <h1>Tic Tac Toe Game</h1>
+        <p id="message"></p>
+        <p>This will be a thin rectangle spanning all across container</p>
+      </div>
 
-<form class="border" id="change-password">
-  <fieldset>
-    <legend>Change Password</legend>
-    <input type="password" name="passwords[old]" placeholder="Old-Password">
-    <input type="password" name="passwords[new]" placeholder="New-Password">
-    <input type="submit" value="Change Password">
-  </fieldset>
-</form>
-<form class="border" id="sign-out">
-  <fieldset>
-    <legend>Sign Out</legend>
-    <input type="submit" value="Sign Out">
-  </fieldset>
-</form>
+      <div class="left">
+        Left Sidebar
+        <!-- placeholder text from: http://saganipsum.com/?p=1 -->
+        <p>Science not a sunrise but a galaxyrise rings of Uranus. Another world, inconspicuous motes of rock and gas, hundreds of thousands, finite but unbounded extraordinary claims require extraordinary evidence rich in mystery Tunguska event gathered by gravity, the ash of stellar alchemy courage of our questions Rig Veda white dwarf? Cambrian explosion of brilliant syntheses quasar colonies hearts of the stars courage of our questions, prime number rich in heavy atoms Orion's sword Sea of Tranquility across the centuries paroxysm of global death something incredible is waiting to be known radio telescope and billions upon billions upon billions upon billions upon billions upon billions upon billions.</p>
+      </div>
+
+      <div class="game" id="game">
+        <div class="game-board">
+          <div class="box" id="one"></div>
+          <div class="box" id="two"></div>
+          <div class="box" id="three"></div>
+          <div class="box" id="four"></div>
+          <div class="box" id="five"></div>
+          <div class="box" id="six"></div>
+          <div class="box" id="seven"></div>
+          <div class="box" id="eight"></div>
+          <div class="box" id="nine"></div>
+        </div>
+      </div>
+
+      <div class="right">
+        Right Sidebar
+        <!-- placeholder text from: http://saganipsum.com/?p=1 -->
+        <p>Science not a sunrise but a galaxyrise rings of Uranus. Another world, inconspicuous motes of rock and gas, hundreds of thousands, finite but unbounded extraordinary claims require extraordinary evidence rich in mystery Tunguska event gathered by gravity, the ash of stellar alchemy courage of our questions Rig Veda white dwarf? Cambrian explosion of brilliant syntheses quasar colonies hearts of the stars courage of our questions, prime number rich in heavy atoms Orion's sword Sea of Tranquility across the centuries paroxysm of global death something incredible is waiting to be known radio telescope and billions upon billions upon billions upon billions upon billions upon billions upon billions.</p>
+      </div>
+
+      <div class="heading" id="extras">
+        <h5>Extras</h5>
+        <p>This will be a thin rectangle spanning all across container</p>
+      </div>
+
+      <div class="footer" id="footer">Footer</div>
+    </div>
+
+      <div><!-- Div for all modals -->
+      <!-- Modal for sign-up -->
+      <div id="id01" class="modal">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <!-- form#sign-up.border  -->
+        <form class="modal-content border" id="sign-up" action="/action_page.php">
+          <div class="container">
+            <h1>Register</h1>
+            <hr>
+              <fieldset>
+                <legend>Sign up!</legend>
+                <input type="text" name="credentials[email]" placeholder="Email" required>
+                <input type="password" name="credentials[password]" placeholder="Password" required>
+                <input type="password" name="credentials[password_confirmation]" placeholder="Password Confirmation" reqired>
+                <!-- <input type="submit" value="Sign up!"> -->
+            <!-- <label>
+              <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+            </label> -->
+                <!-- <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p> -->
+              </fieldset>
+            <div class="clearfix">
+              <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+              <button type="submit" class="signupbtn">Sign Up</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <!-- Modal for sign in -->
+      <div id="id02" class="modal">
+        <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <!-- form#sign-up.border  -->
+        <form class="modal-content border" id="sign-in" action="/action_page.php">
+          <div class="container">
+            <h1>Sign In</h1>
+            <hr>
+              <fieldset>
+                <legend>Sign up!</legend>
+                <input type="text" name="credentials[email]" placeholder="Email" required>
+                <input type="password" name="credentials[password]" placeholder="Password" required>
+                <input type="submit" value="Sign in">
+              </fieldset>
+            <div class="clearfix">
+              <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+              <button type="submit" class="signupbtn">Sign In</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <!-- Modal for changing password -->
+      <div id="id03" class="modal">
+        <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <!-- form#sign-up.border  -->
+        <form class="modal-content border" id="change-password" action="/action_page.php">
+          <div class="container">
+            <h1>Password Change</h1>
+            <hr>
+              <fieldset>
+                <legend>Password Change</legend>
+                <input type="password" name="passwords[old]" placeholder="Old-Password" required>
+                <input type="password" name="passwords[new]" placeholder="New-Password">
+                <input type="submit" value="Change Password">
+              </fieldset>
+            <div class="clearfix">
+              <button type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn">Cancel</button>
+              <button type="submit" class="signupbtn">Change Password</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+<!-- Modal JAVASCRIPT to be moved to separate file -->
+<script>
+// Get the modal
+var modal1 = document.getElementById('id01');
+var modal2 = document.getElementById('id02');
+var modal3 = document.getElementById('id03');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target === modal1 || event.target === modal2 || event.target === modal3) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
     </body>
 </html>
