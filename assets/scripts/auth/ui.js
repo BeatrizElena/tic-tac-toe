@@ -54,6 +54,16 @@ const signOutFailure = function (error) {
   console.log(error)
 }
 
+const signUpModal = function () {
+  console.log('Hooollaaa')
+  const modal1 = document.getElementById('#modal1')
+  window.onclick = function (event) {
+    if (event.target === modal1) {
+      $('#modal1').style.display = 'none'
+    }
+  }
+}
+
 module.exports = {
   signUpSuccess,
   signInSuccess,
@@ -62,5 +72,6 @@ module.exports = {
   signUpFailure,
   signInFailure,
   changePasswordFailure,
-  signOutFailure
+  signOutFailure,
+  signUpModal
 }
