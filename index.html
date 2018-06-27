@@ -127,10 +127,26 @@
                       <div class="box" id="8"></div>
                     </div>
                   </div>
+                  <p id="winner"></p>
               </article>
               <aside class="side">Sidebar: Players info here?</aside>
               <div class="ad">Advertising</div>
               <footer class="main-footer">The footer</footer>
+
+              <script>
+              const switchPlayer = function () {
+                let moves = 0
+                $('.box').on('click', function (event) {
+                  const square = event.target.id // target square
+                  if ($(`#${square}`).text() === '') {
+                    moves % 2 === 0 ? $(`#${square}`).html('X').css('color', 'red') : $(`#${square}`).html('O').css('color', 'yellow')
+                    moves++
+                  } else if ($(`#${square}`).text() !== '') {
+                    $(`#${square}`).off()
+                  }
+                }
+              }
+              </script>
       </div>
 
 
