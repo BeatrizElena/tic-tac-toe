@@ -106,7 +106,7 @@
 
               <header class="main-head">
                 <h1>Tic Tac Toe Game</h1>
-                <p id="message"> message to user goes here</p>
+                <p id="message"></p>
               </header>
 
               <article class="content">
@@ -125,53 +125,54 @@
                   </div>
                   <p id="winner"></p>
               </article>
-              <aside class="side">Sidebar: Players info here?
-                <!-- Game forms -->
-                <!-- game form for new game -->
-                <form id="game-create" class="border">
-                  <fieldset>
-                    <legend>Create One Game</legend>
-                    <input type="text" name="game[text]" placeholder="Enter Game Text">
-                    <input type="submit" value="Create Game">
-                  </fieldset>
-                </form>
-              </aside>
+              <aside class="side">Sidebar: Players info here?</aside>
               <div class="ad">Advertising</div>
-
-              <form id="game-index" class="border">
-                <fieldset>
-                  <legend>Get All Games</legend>
-                  <input type="submit" value="Get All Games">
-                </fieldset>
-              </form>
-
-              <form id="game-show" class="border">
-                <fieldset>
-                  <legend>Get One Example</legend>
-                    <input type="text" name="game[id]" placeholder="Enter Game ID">
-                    <input type="submit">
-                </fieldset>
-              </form>
-
-              <form id="game-delete" class="border">
-                <fieldset>
-                  <legend>Delete One Game</legend>
-                  <input type="text" name="game[id]" placeholder="Enter Game ID">
-                  <input type="submit" value="Delete Game">
-                </fieldset>
-              </form>
-
-              <form id="game-update" class="border">
-                <fieldset>
-                  <legend>Update One Game</legend>
-                  <input type="text" name="game[id]" placeholder="Enter Game ID">
-                  <input type="text" name="game[text]" placeholder="Enter Game Text">
-                  <input type="submit" value="Update Game">
-                </fieldset>
-              </form>
-
-              <footer class="main-footer">The footer</footer>
       </div> <!-- wrapper div ends here -->
+
+
+      <!-- Game forms -->
+      <!-- game form for new game -->
+      <form id="game-create" class="border">
+        <fieldset>
+          <legend>Create One Game</legend>
+          <input type="text" name="game[text]" placeholder="Enter Game Text">
+          <input type="submit" value="Create Game">
+        </fieldset>
+      </form>
+
+      <form id="game-index" class="border">
+      <fieldset>
+        <legend>Get All Games</legend>
+        <input type="submit" value="Get All Games">
+      </fieldset>
+      </form>
+
+      <form id="game-show" class="border">
+      <fieldset>
+        <legend>Get One Game</legend>
+          <input type="text" name="game[id]" placeholder="Enter Game ID">
+          <input type="submit">
+      </fieldset>
+      </form>
+
+      <form id="game-delete" class="border">
+      <fieldset>
+        <legend>Delete One Game</legend>
+        <input type="text" name="game[id]" placeholder="Enter Game ID">
+        <input type="submit" value="Delete Game">
+      </fieldset>
+      </form>
+
+      <form id="game-update" class="border">
+      <fieldset>
+        <legend>Update One Game</legend>
+        <input type="text" name="game[id]" placeholder="Enter Game ID">
+        <input type="text" name="game[text]" placeholder="Enter Game Text">
+        <input type="submit" value="Update Game">
+      </fieldset>
+      </form>
+
+      <footer class="main-footer">The footer</footer>
 
 
 
