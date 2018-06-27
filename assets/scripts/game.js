@@ -50,10 +50,10 @@ const switchPlayer = function () {
     } else if ($(`#${square}`).text() !== '') {
       $(`#${square}`).off()
     }
-  }).win()
+  })
+  win()
 }
 
 module.exports = {
-  switchPlayer,
-  win
+  switchPlayer
 }
