@@ -4,27 +4,25 @@ $game-board-font-color: #fff;
 $game-box-border: #2c3e50;
 
 // Source: https://codepen.io/shammadahmed/pen/JOWEGW  */
-section {
-  game-board {
-    background-color: $game-board-background;
-    border: 6px solid $game-board-border;
-    border-radius: 10px;
-    color: $game-board-font-color;
-    display: grid;
-    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
-    height: 600px;
-    margin: 0 auto;
-    width: 600px;
+.game-board {
+  background-color: $game-board-background;
+  border: 6px solid $game-board-border;
+  border-radius: 10px;
+  color: $game-board-font-color;
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  height: 600px;
+  margin: 0 auto;
+  width: 600px;
   }
 
-  box {
-    align-items: center;
-    border: 6px solid $game-box-border;
-    border-radius: 2px;
-    display: flex;
-    font-family: Helvetica;
-    font-size: 4em;
-    font-weight: bold;
-    justify-content: center;
+.box {
+  align-items: center;
+  border: 6px solid $game-box-border;
+  border-radius: 2px;
+  display: flex;
+  font-family: Helvetica;
+  font-size: 4em;
+  font-weight: bold;
+  justify-content: center;
   }
-}
