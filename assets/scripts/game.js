@@ -50,7 +50,7 @@ const switchPlayer = function () {
     } else if ($(`#${square}`).text() !== '') {
       $(`#${square}`).off()
     }
-  }
+  }).win()
 }
 
 module.exports = {
