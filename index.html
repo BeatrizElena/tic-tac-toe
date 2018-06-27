@@ -94,6 +94,7 @@
     </head>
     <body>
       <div class="wrapper">
+        <!-- Trigger the modals with buttons TODO: Put inside nav bar?-->
               <nav class="main-nav">
                   <ul>
                       <li><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#signUpModal">Sign Up</button></li>
@@ -101,11 +102,6 @@
                       <li><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#changePwdModal">Change Password</button></li>
                       <li><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#signOutModal">Sign Out</button></li>
                   </ul>
-                  <!-- Trigger the modals with buttons TODO: Put inside nav bar?-->
-                  <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#signUpModal">Sign Up</button> -->
-                  <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#signInModal">Sign In</button> -->
-                  <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#changePwdModal">Change Password</button> -->
-                  <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#signOutModal">Sign Out</button> -->
               </nav>
 
               <header class="main-head">
@@ -129,34 +125,53 @@
                   </div>
                   <p id="winner"></p>
               </article>
-              <aside class="side">Sidebar: Players info here?</aside>
+              <aside class="side">Sidebar: Players info here?
+                <!-- Game forms -->
+                <!-- game form for new game -->
+                <form id="game-create" class="border">
+                  <fieldset>
+                    <legend>Create One Game</legend>
+                    <input type="text" name="game[text]" placeholder="Enter Game Text">
+                    <input type="submit" value="Create Game">
+                  </fieldset>
+                </form>
+              </aside>
               <div class="ad">Advertising</div>
+
+              <form id="game-index" class="border">
+                <fieldset>
+                  <legend>Get All Games</legend>
+                  <input type="submit" value="Get All Games">
+                </fieldset>
+              </form>
+
+              <form id="game-show" class="border">
+                <fieldset>
+                  <legend>Get One Example</legend>
+                    <input type="text" name="game[id]" placeholder="Enter Game ID">
+                    <input type="submit">
+                </fieldset>
+              </form>
+
+              <form id="game-delete" class="border">
+                <fieldset>
+                  <legend>Delete One Game</legend>
+                  <input type="text" name="game[id]" placeholder="Enter Game ID">
+                  <input type="submit" value="Delete Game">
+                </fieldset>
+              </form>
+
+              <form id="game-update" class="border">
+                <fieldset>
+                  <legend>Update One Game</legend>
+                  <input type="text" name="game[id]" placeholder="Enter Game ID">
+                  <input type="text" name="game[text]" placeholder="Enter Game Text">
+                  <input type="submit" value="Update Game">
+                </fieldset>
+              </form>
+
               <footer class="main-footer">The footer</footer>
-
-              <script>
-              const switchPlayer = function () {
-                let moves = 0
-                $('.box').on('click', function (event) {
-                  const square = event.target.id // target square
-                  if ($(`#${square}`).text() === '') {
-                    moves % 2 === 0 ? $(`#${square}`).html('X').css('color', 'red') : $(`#${square}`).html('O').css('color', 'yellow')
-                    moves++
-                  } else if ($(`#${square}`).text() !== '') {
-                    $(`#${square}`).off()
-                  }
-                }
-              }
-              </script>
-      </div>
-
-
-
-
-
-
-
-
-
+      </div> <!-- wrapper div ends here -->
 
 
 
@@ -269,13 +284,12 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Confirm Sign Out!</h4>
+          <h4 class="modal-title">Are you sure you want to leave? Come Back Soon!</h4>
         </div>
         <div class="modal-body">
           <!-- form#change-pwd.border  -->
           <form class="border" id="sign-out">
             <fieldset>
-              <legend>Sign Out</legend>
               <input type="submit" value="Sign Out">
             </fieldset>
           </form>
@@ -287,7 +301,6 @@
     </div>
   </div>
 </div> <!-- Change Password Modal ends here-->
-
 
 
     </body>
