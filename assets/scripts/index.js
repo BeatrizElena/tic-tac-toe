@@ -12,5 +12,6 @@ const switchPlayer = require('./game')
 $(() => {
   authUsers.addHandlers()
   authGames.addHandlers()
+  // switchPlayer.start()
   switchPlayer.switchPlayer()
 })
