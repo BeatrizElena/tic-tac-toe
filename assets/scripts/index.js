@@ -10,5 +10,6 @@ const switchPlayer = require('./game')
 
 $(() => {
   authEvents.addHandlers()
-  switchPlayer()
+  switchPlayer.switchPlayer()
+  switchPlayer.win()
 })
