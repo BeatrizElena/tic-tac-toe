@@ -1,6 +1,7 @@
 'use strict'
 
 const store = require('./store.js')
+// const updateGame = require('./games/game-api.js')
 
 const win = function () {
   const x1 = $('#0, #1, #2').text()
@@ -26,10 +27,10 @@ const win = function () {
 // moves increases by 1, so modulo is 1 or player 2
 
 const switchPlayer = function () {
-  console.log(store)
+  // console.log(store)
   if (!store.user) {
     $('.box').off('click')
-    $('#message').html('Please sign in!').css('color', 'green')
+    $('#message').html('Please sign in!').css('color', 'rgb(54, 66, 78)')
   } else {
     let moves = 0
     $('.box').on('click', function (event) {
@@ -41,6 +42,7 @@ const switchPlayer = function () {
         $(`#${square}`).off()
       }
       win()
+      // updateGame.update()
     })
   }
 }
