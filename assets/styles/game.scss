@@ -1,14 +1,10 @@
-$game-board-background: rgb(131, 153 , 246);
-$game-board-border: #2c3e50;
-$game-board-font-color: #fff;
-$game-box-border: #2c3e50;
 
 // Source: https://codepen.io/shammadahmed/pen/JOWEGW  */
 .game-board {
-  background-color: $game-board-background;
-  border: 6px solid $game-board-border;
+  background-color: $cornflower-blue;
+  border: 6px solid $darkslate-blue;
   border-radius: 10px;
-  color: $game-board-font-color;
+  color: $white;
   display: grid;
   grid-template: repeat(3, 1fr) / repeat(3, 1fr);
   height: 600px;
@@ -18,7 +14,7 @@ $game-box-border: #2c3e50;
 
 .box {
   align-items: center;
-  border: 6px solid $game-box-border;
+  border: 6px solid $gainsboro;
   border-radius: 2px;
   display: flex;
   font-family: Helvetica;

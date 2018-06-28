@@ -41,6 +41,23 @@ nav {
   }
 }
 
+.btn {
+  background-color: $cornflower-blue;
+}
+
+h1 {
+  color: $cornflower-blue;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+.modal-body {
+  background-color: $gainsboro;
+}
+
 @media (min-width: 500px) {
   .wrapper {
     grid-template-areas:
