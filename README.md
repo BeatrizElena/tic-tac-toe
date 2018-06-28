@@ -34,7 +34,7 @@ This game is an individual project that has as its main requirements:
 
 _Planning Stage_
 
-In addition to creating a [wireframe](./tic-tac-toe-wireframe.pdf) and writing [user stories](./user-stories-jun21.png), I spent time reviewing lessons that dealt with areas of knowledge I felt I would need for the tic tac toe project. This included the boggle challenge and Authorization Tokens. I also took lots of notes on the requirements and created a draft schedule of what I would work on each day. And finally, for inspiration, I took a quick look around the web to get a sense of how others presented a tic tac toe game to the user.
+In addition to creating a [wireframe](./tic-tac-toe-wireframe.pdf) and writing [user stories](./user-stories-jun21.png), I spent time reviewing lessons that dealt with areas of knowledge I felt I would need for the tic tac toe project. This included the [boggle challenge](https://git.generalassemb.ly/ga-wdi-boston/js-boggle-challenge) and [Authorization Tokens](https://git.generalassemb.ly/ga-wdi-boston/jquery-ajax-token-auth). I also took lots of notes on the requirements and created a draft schedule of what I would work on each day. And finally, for inspiration, I took a quick look around the web to get a sense of how others presented a tic tac toe game to the user.
 
 _Working Process_
 
