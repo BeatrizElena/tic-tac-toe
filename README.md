@@ -1,9 +1,9 @@
-#Tic Tac Toe Game for Two Players
+# Tic Tac Toe Game for Two Players
 
 
-####Project One from General Assembly's Web Development Immersive Class - Providence
+#### Project One from General Assembly's Web Development Immersive Class - Providence
 
-######Overview
+###### Overview
 
 This game is an individual project that has as its main requirements:
 
@@ -19,7 +19,7 @@ This game is an individual project that has as its main requirements:
 
 
 
-######Technologies Used
+###### Technologies Used
 
 - JavaScript
 - jQuery
@@ -30,7 +30,7 @@ This game is an individual project that has as its main requirements:
 
 
 
-######Reflections on the Process
+###### Reflections on the Process
 
 _Planning Stage_
 
