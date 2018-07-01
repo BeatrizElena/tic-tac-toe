@@ -29,33 +29,32 @@
           </div><!-- /.container-fluid -->
         </nav>
 
+        <header class="main-head">
+          <p id="message"></p>
+        </header>
 
+        <article class="content">
+            <div class="game" id="game">
+              <div class="game-board">
+                <div class="box" id="0"></div>
+                <div class="box" id="1"></div>
+                <div class="box" id="2"></div>
+                <div class="box" id="3"></div>
+                <div class="box" id="4"></div>
+                <div class="box" id="5"></div>
+                <div class="box" id="6"></div>
+                <div class="box" id="7"></div>
+                <div class="box" id="8"></div>
+              </div>
+            </div>
 
-                  <ul>
+            <form id="game-create" class="border">
+                <fieldset>
+                  <input type="submit" name="game[text]" value="Create Game">
+                </fieldset>
+            </form>
 
-                  </ul>
-
-
-              <header class="main-head">
-                <!-- <h1>Tic Tac Toe Game</h1> -->
-                <p id="message"></p>
-              </header>
-
-              <article class="content">
-                  <div class="game" id="game">
-                    <div class="game-board">
-                      <div class="box" id="0"></div>
-                      <div class="box" id="1"></div>
-                      <div class="box" id="2"></div>
-                      <div class="box" id="3"></div>
-                      <div class="box" id="4"></div>
-                      <div class="box" id="5"></div>
-                      <div class="box" id="6"></div>
-                      <div class="box" id="7"></div>
-                      <div class="box" id="8"></div>
-                    </div>
-                  </div>
-              </article>
+        </article>
       </div> <!-- wrapper div ends here -->
 
 
@@ -101,7 +100,6 @@
 <!-- Create  the modals for sign-up, sign-in, change psw, and sign out-->
 <!-- Sign Up Modal -->
 <div class="container">
-  <!-- Sign Up Modal -->
   <div class="modal fade" id="signUpModal" role="dialog">
     <div class="modal-dialog">
 
@@ -166,7 +164,6 @@
 
 <!-- Change Password Modal -->
 <div class="container">
-  <!-- Modal -->
   <div class="modal fade" id="changePwdModal" role="dialog">
     <div class="modal-dialog">
 
@@ -197,7 +194,6 @@
 
 <!-- Sign Out Modal -->
 <div class="container">
-  <!-- Modal -->
   <div class="modal fade" id="signOutModal" role="dialog">
     <div class="modal-dialog">
 
@@ -222,7 +218,6 @@
     </div>
   </div>
 </div> <!-- Change Password Modal ends here-->
-
 
     </body>
 </html>
