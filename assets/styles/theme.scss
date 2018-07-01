@@ -1,7 +1,7 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
-@import 'colors';
-@import 'game';
-@import 'grid';
-@import 'theme';
+body {
+  background-color: $blue-gray-body;
+  color: $font-color;
+}
