@@ -27,8 +27,8 @@
   display: grid;
   grid-gap: 20px;
   grid-template-areas:
-  'header'
   'nav'
+  'header'
   'content'
   'sidebar'
   'stats'
@@ -61,8 +61,8 @@ p {
 @media (min-width: 500px) {
   .wrapper {
     grid-template-areas:
-    'header  header'
     'nav     nav'
+    'header  header'
     'sidebar content'
     'stats      footer';
     grid-template-columns: 1fr 3fr;
@@ -78,8 +78,8 @@ p {
 @media (min-width: 700px) {
   .wrapper {
     grid-template-areas:
+    'nav    nav nav'
     'header header  header'
-    'nav    content sidebar'
     'nav    content stats'
     'footer footer  footer';
     grid-template-columns: 1fr 4fr 1fr;
