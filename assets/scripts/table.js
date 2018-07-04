@@ -22,6 +22,7 @@ function generateTable () {
       const cellText = document.createTextNode(position)
       cell.appendChild(cellText)
       row.appendChild(cell)
+      cell.setAttribute('border', '2')
     }
     // add row to the end of the table
     tableBody.appendChild(row)
