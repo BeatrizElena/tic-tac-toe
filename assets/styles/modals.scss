@@ -22,3 +22,7 @@
   margin: 5% auto; // 5% on all sides and centered
   width: 70%; // Could be more or less, depending on screen size
 }
+
+.modal-body {
+  background-color: $gainsboro;
+}
