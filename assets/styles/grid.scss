@@ -53,9 +53,19 @@ p {
   text-align: center;
 }
 
-.modal-body {
-  background-color: $gainsboro;
+article {
+
+  div {
+
+    button {
+      background-color: $cornflower-blue;
+      color: $white;
+      float: right;
+    }
+  }
 }
+
+
 
 @media (min-width: 500px) {
   .wrapper {
