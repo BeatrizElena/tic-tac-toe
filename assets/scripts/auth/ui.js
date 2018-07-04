@@ -1,7 +1,7 @@
 'use strict'
 
 const store = require('../store')
-const game = require('../game.js')
+// const game = require('../game.js')
 
 const signUpSuccess = function (data) {
   $('#message').text('Signed up successfully')
@@ -14,7 +14,11 @@ const signInSuccess = function (data) {
   $('#message').css('background-color', 'green')
   console.log(`signInSuccess ran. Data is: ${data}`)
   store.user = data.user
-  game.switchPlayer()
+  console.log('signInSuccess ran. store.user is: ')
+  console.log(store.user)
+  // game.table()
+  // game.startGameButton()
+  // game.playGame()
 }
 
 const signOutSuccess = function (data) {
