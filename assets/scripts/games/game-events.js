@@ -7,12 +7,7 @@ const table = require(`../table`)
 
 const onCreateGame = function (event) {
   event.preventDefault()
-  console.log('onCreateGame from game-events.js ran!')
-
-  // const data = getFormFields(event.target)
-  // console.log(`data from onCreateGame is ${data}`)
-
-  $('#board-create').on('click', table.generateTable)
+  table.generateTable()
   const data = {}
   api.create(data)
     .then(ui.onCreateSuccess)
