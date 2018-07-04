@@ -28,14 +28,27 @@ table {
   border: 6px solid $darkslate-blue;
   border-collapse: collapse;
   border-radius: 10px;
+  box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
 
-style cells
+tr {
+  align-items: center;
+  border: 6px solid $gainsboro;
+  box-sizing: border-box;
+  // border-radius: 12px;
+  // font-family: Helvetica;
+  // font-size: 4em;
+  // font-weight: bold;
+  // justify-content: center;
+  // padding: 5px;
+}
+
 td {
   align-items: center;
   border: 6px solid $gainsboro;
-  border-radius: 2px;
+  border-radius: 12px;
+  box-sizing: border-box;
   font-family: Helvetica;
   font-size: 4em;
   font-weight: bold;
