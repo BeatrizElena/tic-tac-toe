@@ -31,7 +31,7 @@ function generateTable () {
   // put the tbody in the table
   table.appendChild(tableBody)
 
-  // append table into div with id 'game-div'
+  // append table to div with id 'game-div'
   const gameDivId = document.getElementById('game-div')
   game.appendChild(table)
   gameDivId.appendChild(table)
