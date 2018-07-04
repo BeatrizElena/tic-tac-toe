@@ -18,7 +18,8 @@ function generateTable () {
     // put the td at the end of the table row
       const cell = document.createElement('td')
       // const cellText = document.createTextNode(i, j)
-      const position = 'R' + i + 'C' + j
+      // const position = 'R' + i + 'C' + j
+      const position = [i, j]
       const cellText = document.createTextNode(position)
       cell.appendChild(cellText)
       row.appendChild(cell)
@@ -30,13 +31,13 @@ function generateTable () {
   // put the tbody in the table
   table.appendChild(tableBody)
 
-  // append table into body[0]
-  const gameDivId = document.getElementById('game')
+  // append table into div with id 'game-div'
+  const gameDivId = document.getElementById('game-div')
   game.appendChild(table)
   gameDivId.appendChild(table)
 
   // sets the border attibute of table to 2
-  table.setAttribute('border', '2')
+  // table.setAttribute('border', '2')
 }
 
 module.exports = {
