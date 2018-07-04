@@ -5,13 +5,18 @@
 
 // use require without a reference to ensure a file is bundled
 // require('./example')
+
+// game-events.js has:
+// $('#game-create').on('submit', onCreateBoard) ===> generates table
+// $('#game-create').on('submit', onCreateGame)
+// $('#game-index').on('submit', onIndexGame)
+// $('#game-show').on('submit', onShowGame)
+// $('#game-update').on('submit', onUpdateGame)
+
 const authUsers = require('./auth/events')
-const authGames = require('./games/game-events')
-const switchPlayer = require('./game')
+const gameEvents = require('./games/game-events')
 
 $(() => {
   authUsers.addHandlers()
-  authGames.addHandlers()
-  // switchPlayer.start()
-  switchPlayer.switchPlayer()
+  gameEvents.addHandlers()
 })
