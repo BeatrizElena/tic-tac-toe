@@ -1,15 +1,19 @@
 'use strict'
 
-const getFormFields = require(`../../../lib/get-form-fields`)
-
 const api = require('./game-api')
 const ui = require('./game-ui')
+const getFormFields = require(`../../../lib/get-form-fields`)
+const table = require(`../table`)
 
 const onCreateGame = function (event) {
   event.preventDefault()
-  console.log('onCreateGame ran!')
+  console.log('onCreateGame from game-events.js ran!')
 
-  const data = getFormFields(event.target)
+  // const data = getFormFields(event.target)
+  // console.log(`data from onCreateGame is ${data}`)
+
+  $('#board-create').on('click', table.generateTable)
+  const data = {}
   api.create(data)
     .then(ui.onCreateSuccess)
     .catch(ui.onCreateFailure)
@@ -42,24 +46,6 @@ const onShowGame = function (event) {
   }
 }
 
-const onDeleteGame = function (event) {
-  event.preventDefault()
-  console.log('onDeleteGame ran!')
-
-  const data = getFormFields(event.target)
-  const game = data.game
-
-  if (game.id.length !== 0) {
-    api.destroy(game.id)
-      .then(ui.onDeleteSuccess)
-      .catch(ui.onDeleteFailure)
-  } else {
-    $('#message').html('<p>Please provide a game id!</p>')
-    $('#message').css('background-color', 'red')
-    console.log('Please provide an example id!')
-  }
-}
-
 const onUpdateGame = function (event) {
   event.preventDefault()
   console.log('onUpdateGame ran!')
@@ -84,11 +70,18 @@ const onUpdateGame = function (event) {
   }
 }
 
+// const onCreateBoard = (event) => {
+//   event.preventDefault()
+//   table.generateTable()
+//   console.log('table show up!')
+// }
+
 const addHandlers = () => {
-  $('#game-create').on('submit', onCreateGame)
+  console.log('events')
+  // $('#board-create').on('click', onCreateBoard)
+  $('#game-create').on('click', onCreateGame)
   $('#game-index').on('submit', onIndexGame)
   $('#game-show').on('submit', onShowGame)
-  $('#game-delete').on('submit', onDeleteGame)
   $('#game-update').on('submit', onUpdateGame)
 }
 
