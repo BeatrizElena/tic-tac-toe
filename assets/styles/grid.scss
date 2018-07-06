@@ -1,3 +1,16 @@
+// https://www.layoutit.com/grid
+// .grid-container {
+//   display: grid;
+//   height: 100%;
+//   grid-template-columns: 1.75fr 3fr;
+//   grid-template-rows: 1fr 4fr 1fr;
+//   grid-template-areas: ". ." ". ." ". .";
+// }
+// html:
+// <div class="grid-container">
+// </div>
+
+
 .main-nav {
   grid-area: nav;
 }
