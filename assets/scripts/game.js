@@ -1,57 +1,66 @@
 'use strict'
 
 const store = require('./store.js')
-// const gameApi = require('./games/game-api.js')
 
-const notAllowPlay = function () {
+// const notAllowPlay = function () {
+//   // console.log(store)
+//   if (!store.user) {
+//     $('.box').off('click')
+//     $('#game-create').off('click')
+//     $('#message').html('Please sign in!').css('color', 'rgb(54, 66, 78)')
+//   } else {
+//     playGame()
+//   }
+// }
+
+const signInPrompt = function () {
   // console.log(store)
   if (!store.user) {
-    $('.box').off('click')
-    $('#game-create').off('click')
+    // $('.box').off('click')
+    // $('#game-create').off('click')
     $('#message').html('Please sign in!').css('color', 'rgb(54, 66, 78)')
-  } else {
-    playGame()
   }
 }
 
-const playGame = function () {
-  let moves = 0
-  $('.box').on('click', function (event) {
-    const square = event.target.id // target square
-    if ($(`#${square}`).text() === '') {
-      moves % 2 === 0 ? $(`#${square}`).html('X').css('color', 'red') : $(`#${square}`).html('O').css('color', 'yellow')
-      moves++
-    } else if ($(`#${square}`).text() !== '') {
-      $(`#${square}`).off()
-    }
-    win()
-    // updateGame.update()
-  })
-}
+// const playGame = function () {
+//   let moves = 0
+//   $('ttable').on('click', function (event) {
+//     const square = event.target.id // target square
+//     if ($(`#${square}`).text() === '') {
+//       moves % 2 === 0 ? $(`#${square}`).html('X').css('color', 'red') : $(`#${square}`).html('O').css('color', 'yellow')
+//       moves++
+//     } else if ($(`#${square}`).text() !== '') {
+//       $(`#${square}`).off()
+//     }
+//     win()
+//     // updateGame.update()
+//   })
+// }
 
-const win = function () {
-  const x1 = $('#0, #1, #2').text()
-  console.log(x1)
-  const x2 = $('#3, #4, #5').text()
-  const x3 = $('#6, #7, #8').text()
-  console.log(x3)
-  const x4 = $('#0, #3, #6').text()
-  const x5 = $('#1, #4, #7').text()
-  const x6 = $('#2, #5, #8').text()
-  const x7 = $('#0, #4, #8').text()
-  const x8 = $('#2, #4, #6').text()
-  if (x1 === 'XXX' || x2 === 'XXX' || x3 === 'XXX' || x4 === 'XXX' || x5 === 'XXX' || x6 === 'XXX' || x7 === 'XXX' || x8 === 'XXX') {
-    $('#message').html('X, you win!').css('color', 'red')
-    $('.box').off('click')
-  } else if (x1 === 'OOO' || x2 === 'OOO' || x3 === 'OOO' || x4 === 'OOO' || x5 === 'OOO' || x6 === 'OOO' || x7 === 'OOO' || x8 === 'OOO') {
-    $('#message').html('O, you win!').css('color', 'green')
-    $('.box').off('click')
-  }
-}
+// const win = function () {
+//   const x1 = $('#0, #1, #2').text()
+//   console.log(x1)
+//   const x2 = $('#3, #4, #5').text()
+//   const x3 = $('#6, #7, #8').text()
+//   console.log(x3)
+//   const x4 = $('#0, #3, #6').text()
+//   const x5 = $('#1, #4, #7').text()
+//   const x6 = $('#2, #5, #8').text()
+//   const x7 = $('#0, #4, #8').text()
+//   const x8 = $('#2, #4, #6').text()
+//   if (x1 === 'XXX' || x2 === 'XXX' || x3 === 'XXX' || x4 === 'XXX' || x5 === 'XXX' || x6 === 'XXX' || x7 === 'XXX' || x8 === 'XXX') {
+//     $('#message').html('X, you win!').css('color', 'red')
+//     $('.box').off('click')
+//   } else if (x1 === 'OOO' || x2 === 'OOO' || x3 === 'OOO' || x4 === 'OOO' || x5 === 'OOO' || x6 === 'OOO' || x7 === 'OOO' || x8 === 'OOO') {
+//     $('#message').html('O, you win!').css('color', 'green')
+//     $('.box').off('click')
+//   }
+// }
 
 module.exports = {
+  signInPrompt
   // startGameButton,
-  notAllowPlay
+  // notAllowPlay
   // playGame
 }
 

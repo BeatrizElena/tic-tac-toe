@@ -24,7 +24,7 @@ const generateTable = function () {
       // const cellText = document.createTextNode(i, j)
       // const position = 'R' + i + 'C' + j
       const position = [i, j]
-      id ++
+      id++
       const cellText = document.createTextNode(id)
       cell.appendChild(cellText)
       row.appendChild(cell)
@@ -50,7 +50,6 @@ const generateTable = function () {
   //     $(`#${square}`).off()
   //   }
 
-  // sets the border attibute of table to 2
   // table.setAttribute('border', '2')
 // }
 }

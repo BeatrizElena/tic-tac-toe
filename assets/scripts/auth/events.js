@@ -18,7 +18,7 @@ const onSignUp = function (event) {
 
 const onSignIn = function (event) {
   event.preventDefault()
-  console.log('sign up ran!')
+  console.log('sign in ran!')
 
   const data = getFormFields(this)
   console.log(data) // for testing what 'this' is in parameter above

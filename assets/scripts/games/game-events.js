@@ -1,17 +1,28 @@
 'use strict'
 
+const signedInUser = require('../auth/ui')
 const api = require('./game-api')
+// const userUi = require('../auth/ui')
 const ui = require('./game-ui')
 const getFormFields = require(`../../../lib/get-form-fields`)
+const game = require(`../game`)
 const table = require(`../table`)
 
 const onCreateGame = function (event) {
   event.preventDefault()
-  table.generateTable()
   const data = {}
   api.create(data)
-    .then(ui.onCreateSuccess)
-    .catch(ui.onCreateFailure)
+  // if (signedInUser.signInSuccess() === true) {
+  //   api.create(data)
+  //   ui.onCreateSuccess()
+  //   table.generateTable()
+  // } else {
+  //   game.signInPrompt()
+  // }
+  .then(ui.onCreateSuccess)
+  // .then(table.generateTable())
+  .catch(ui.onCreateFailure)
+  // .catch(game.signInPrompt())
 }
 
 const onIndexGame = function (event) {
@@ -70,6 +81,17 @@ const onUpdateGame = function (event) {
 //   table.generateTable()
 //   console.log('table show up!')
 // }
+
+// example code for clearing board:
+/*
+function clearBoard() {
+$('.tile').removeClass('played');
+$('.tile').removeClass('O-play');
+$('.tile').removeClass('X-play');
+$('.tile').html('');
+$('.tile').addClass('free');
+}
+*/
 
 const addHandlers = () => {
   console.log('events')

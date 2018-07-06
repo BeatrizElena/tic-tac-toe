@@ -12,7 +12,7 @@ const signUpSuccess = function (data) {
 const signInSuccess = function (data) {
   $('#message').text('Signed in successfully')
   $('#message').css('background-color', 'green')
-  console.log(`signInSuccess ran. Data is: ${data}`)
+  // console.log(`signInSuccess ran. Data is: ${data}`)
   store.user = data.user
   console.log('signInSuccess ran. store.user is: ')
   console.log(store.user)
