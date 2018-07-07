@@ -1,6 +1,7 @@
 'use strict'
 
 const getFormFields = require('../../../lib/get-form-fields')
+const store = require('../store')
 
 const api = require('./api')
 const ui = require('./ui')
@@ -23,7 +24,7 @@ const onSignIn = function (event) {
   const data = getFormFields(this)
   console.log(data) // for testing what 'this' is in parameter above
   api.signIn(data)
-    .then(ui.signInSuccess)
+    .then(ui.signInSuccess, store.user = data.user, $('#signInModal, .modal-backdrop').hide(), $('#game-options').fadeIn())
     .catch(ui.signInFailure)
 }
 
