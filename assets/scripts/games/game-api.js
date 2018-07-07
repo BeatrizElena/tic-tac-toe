@@ -4,17 +4,31 @@ const config = require('../config')
 const store = require('../store')
 
 // get game
-const create = function (data) {
+const create = function () {
   // console.log('data: ', data)
+
+  let data = {
+    "game": {
+      "cells": ["", "", "", "", "", "", "", "", ""],
+      "over": false,
+      "player_x": {
+        "id": store.user.id,
+        "email": store.user.email
+      },
+      "player_o": null
+    }
+  }
+
   return $.ajax({
     url: config.apiUrl + '/games',
     method: 'POST',
+    contentType: "application/json; charset=utf-8",
+    dataType: "json",
     headers: {
       Authorization: 'Token token=' + store.user.token
     },
-    data
-    // data: data
-  })
+    data: JSON.stringify(data)
+  });
 }
 
 const index = function () {
@@ -26,32 +40,60 @@ const index = function () {
     }
   })
 }
-
-const show = function (game) {
+const getGameById = function (id) {
   return $.ajax({
-    url: config.apiUrl + '/games/' + game.id,
+    url: config.apiUrl + '/games/' + id,
     method: 'GET',
+    contentType: "application/json; charset=utf-8",
+    dataType: "json",
     headers: {
       Authorization: 'Token token=' + store.user.token
     }
-  })
+  });
+}
+const showGames = function (over) {
+
+  let url = (over === false) ? config.apiUrl + '/games?over=false' : config.apiUrl + '/games?over=true';
+
+  return $.ajax({
+    url: url,
+    method: 'GET',
+    contentType: "application/json; charset=utf-8",
+    dataType: "json",
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  });
 }
 
-const update = function (data) {
+const update = function (dataGame, index, value, over) {
+
+  let data = {
+    "game": {
+      "cell": {
+        "index": index,
+        "value": value
+      },
+      "over": over
+    }
+  }
+
   return $.ajax({
-    url: config.apiUrl + '/games/' + data.game.id,
+    url: config.apiUrl + '/games/' + dataGame.game.id,
     method: 'PATCH',
+    contentType: "application/json; charset=utf-8",
+    dataType: "json",
     headers: {
       Authorization: 'Token token=' + store.user.token
     },
-    data
-    // data: data
+    data: JSON.stringify(data)
   })
 }
 
 module.exports = {
   create,
   index,
-  show,
-  update
+  showGames,
+  update,
+  getGameById
 }
