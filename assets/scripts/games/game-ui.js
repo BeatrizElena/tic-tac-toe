@@ -1,12 +1,14 @@
 'use strict'
 
 const table = require('../table.js')
+const game = require(`../game`)
 
 const onCreateSuccess = function (data) {
   $('#message').text('Game successfully created')
   $('#message').css('background-color', 'green')
   console.log('onCreateSuccess ran. Data is :', data)
   table.generateTable()
+  game.playGame()
 }
 
 const onCreateFailure = function (error) {
