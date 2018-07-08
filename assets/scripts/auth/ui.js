@@ -6,6 +6,7 @@ const logic = require('../games/logic-game')
 const signUpSuccess = function (data) {
   $('#message').text('Signed up successfully')
   $('#message').css('color', 'white')
+  logic.resetMessage()
   console.log(`signUpSuccess ran. Data is: ${data}`)
 }
 
@@ -14,6 +15,7 @@ const signInSuccess = function (data) {
   $('#message').css('color', 'white')
   // console.log(`signInSuccess ran. Data is: ${data}`)
   store.user = data.user
+  logic.resetSignInMessage()
   logic.resetMessage()
   // console.log('signInSuccess ran. store.user is: ')
   // console.log(store.user)
@@ -22,8 +24,7 @@ const signInSuccess = function (data) {
 const signOutSuccess = function (data) {
   $('#message').text('Signed out successfully')
   $('#message').css('color', 'white')
-  logic.resetMessage()
-  // console.log(`signOutSuccess ran.`)
+  console.log(`signOutSuccess ran.`)
 }
 
 const changePasswordSuccess = function (data) {
