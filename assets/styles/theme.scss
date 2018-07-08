@@ -5,3 +5,22 @@ body {
   background-color: $blue-gray-body;
   color: $font-color;
 }
+#signup-btn {
+  display: block;
+  background-color: $arsenic-button
+}
+
+#signin-btn {
+  display: block;
+  background-color: $arsenic-button
+}
+
+h6 {
+  color: $cornflower-blue;
+  display: inline-block;
+  text-align: center;
+}
+
+.initial-view {
+  background-color: complement($color: #000000)
+}
