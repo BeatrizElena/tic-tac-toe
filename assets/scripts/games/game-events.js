@@ -29,7 +29,7 @@ const onShowGame = function (event) {
   const game = data.game
 
   if (game.id.length !== 0) {
-    api.show(game)
+    api.showGames(game)
       .then(ui.onShowSuccess)
       .catch(ui.onShowFailure)
   } else {

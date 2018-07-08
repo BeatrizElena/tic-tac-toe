@@ -1,5 +1,7 @@
 'use strict'
 
+const logic = require('./logic-game')
+
 const onCreateSuccess = function (data) {
   $('#message').text('Game successfully created')
   $('#message').css('color', 'white')
@@ -28,6 +30,7 @@ const onShowSuccess = function (data) {
   $('#message').text('One game successfully received')
   $('#message').css('color', 'white')
   console.log('onCreateSuccess ran. Data is :', data)
+  logic.resetMessage()
 }
 
 const onShowFailure = function (error) {

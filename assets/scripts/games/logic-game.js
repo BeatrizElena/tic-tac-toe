@@ -1,4 +1,5 @@
 const api = require('./game-api')
+const user_events = require('../auth/ui')
 
 const size = 3
 let moves = 0
@@ -208,11 +209,25 @@ const resetMessage = () => {
     setTimeout(function () {
         $('#message').empty();
     }, 2000);
-
 }
+
+const resetSignInMessage = () => {
+    setTimeout(function () {
+        $('.initial-view').empty();
+    }, 500);
+}
+
+// const backToGame = (event) => {
+//     $(".initial-view").load(location.href + " .initial-view");
+//     // $('#sign-up').on('submit', user_events.onSignUp)
+//     // $('#sign-in').on('submit', user_events.onSignIn)
+//     // $(".initial-view").show()
+// }
 
 module.exports = {
     printBoard,
     resetGame,
-    resetMessage
+    resetMessage,
+    resetSignInMessage
+    // backToGame
 }
