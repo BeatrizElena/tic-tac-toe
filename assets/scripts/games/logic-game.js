@@ -81,13 +81,14 @@ const mark = () => {
 
         $("#message").text(`Player ${current_mark} won`);
         updateCell(game, index, current_mark, true)
-
+        resetMessage();
         resetGame();
     } else if (moves === Math.pow(size, 2)) {
         tie += 1;
         $("#tie-games").text(tie);
         $("#message").text('It is a Tie');
         updateCell(game, index, current_mark, true)
+        resetMessage();
         resetGame();
     }
 
@@ -199,7 +200,19 @@ const resetGame = () => {
     }, 3000);
 
 }
+
+const resetMessage = () => {
+    game = {};
+    data = {};
+    moves = 0;
+    setTimeout(function () {
+        $('#message').empty();
+    }, 2000);
+
+}
+
 module.exports = {
     printBoard,
-    resetGame
+    resetGame,
+    resetMessage
 }

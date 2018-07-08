@@ -30,7 +30,6 @@ const onSignIn = function (event) {
 
 const onSignOut = function (event) {
   event.preventDefault()
-  console.log('signed out!') // for testing what 'this' is in parameter above
   api.signOut()
     .then(ui.signOutSuccess)
     .catch(ui.signOutFailure)
@@ -43,7 +42,7 @@ const onChangePassword = function (event) {
   const data = getFormFields(this)
   console.log(data) // for testing what 'this' is in parameter above
   api.changePassword(data)
-    .then(ui.changePasswordSuccess)
+    .then(ui.changePasswordSuccess, $('#message').fadeIn())
     .catch(ui.changePasswordFailure)
 }
 

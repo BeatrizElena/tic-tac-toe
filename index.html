@@ -38,14 +38,10 @@
         </ul>
       </div>
       <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container-fluid -->
+    </div> <!-- end /.container-fluid -->
   </nav>
-  <div>
 
-    <header class="main-head">
-      <p class="color-white" id="message"></p>
-    </header>
+  <div>
     <div id="game-options" class="col-md-4" style="display: none">
       <ul>
         <li>
@@ -87,6 +83,9 @@
           </tr>
         </table>
       </div>
+      <header class="main-head">
+          <p class="color-white" id="message"></p>
+      </header>
     </div>
     <div id="board-container" class="col-md-8" style="display: none">
       <div class="board">
@@ -158,48 +157,48 @@
     <!-- Sign In Modal ends here-->
 
     <!-- Change Password Modal -->
-      <div class="modal fade" id="changePwdModal" role="dialog">
-        <div class="modal-dialog">
+    <div class="modal fade" id="changePwdModal" role="dialog">
+      <div class="modal-dialog">
 
-          <!-- Modal content-->
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
-              <h4 class="modal-title">Change Password</h4>
-            </div>
-            <div class="modal-body">
-              <!-- form#change-pwd.border  -->
-              <form class="border" id="change-password">
-                <fieldset>
-                  <legend>Change Password</legend>
-                  <input type="password" name="passwords[old]" placeholder="Old-Password">
-                  <input type="password" name="passwords[new]" placeholder="New-Password">
-                  <input type="submit" value="Change Password">
-                </fieldset>
-              </form>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Change Password</h4>
+          </div>
+          <div class="modal-body">
+            <!-- form#change-pwd.border  -->
+            <form class="border" id="change-password">
+              <fieldset>
+                <legend>Change Password</legend>
+                <input type="password" name="passwords[old]" placeholder="Old-Password">
+                <input type="password" name="passwords[new]" placeholder="New-Password">
+                <input type="submit" value="Change Password">
+              </fieldset>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
+    </div>
 
     <!-- Change Password Modal ends here-->
 
     <!-- Sign Out Modal -->
-      <!-- <div class="modal fade" id="signOutModal" role="dialog">
+    <!-- <div class="modal fade" id="signOutModal" role="dialog">
         <div class="modal-dialog">
 
           <!-- Modal content-->
-          <!-- <div class="modal-content">
+    <!-- <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal">&times;</button>
               <h4 class="modal-title">Are you sure you want to leave? Come Back Soon!</h4>
             </div>
             <div class="modal-body">
               <!-- form#change-pwd.border  -->
-              <!-- <form class="border" id="sign-out">
+    <!-- <form class="border" id="sign-out">
                 <fieldset>
                   <input type="submit" value="Sign Out">
                 </fieldset>
@@ -210,45 +209,12 @@
             </div>
           </div>
         </div>
-      </div> --> --> -->
+      </div> -->
 
     <!-- Sign Out Modal ends here-->
   </div>
   </div>
   <!-- wrapper div ends here -->
-
-
-  <!-- Game forms -->
-
-  <!-- <form id="game-index" class="border">
-      <fieldset>
-        <legend>Get All Games</legend>
-        <input type="submit" value="Get All Games">
-      </fieldset>
-      </form>
-
-      <form id="game-show" class="border">
-      <fieldset>
-        <legend>Get One Game</legend>
-          <input type="text" name="game[id]" placeholder="Enter Game ID">
-          <input type="submit">
-      </fieldset>
-      </form>
-
-      <form id="game-update" class="border">
-      <fieldset>
-        <legend>Update One Game</legend>
-        <input type="text" name="game[id]" placeholder="Enter Game ID">
-        <input type="text" name="game[text]" placeholder="Enter Game Text">
-        <input type="submit" value="Update Game">
-      </fieldset>
-      </form> -->
-
-
-
-
-
-
 
 
 </body>

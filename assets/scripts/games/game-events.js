@@ -1,12 +1,8 @@
 'use strict'
 
-const signedInUser = require('../auth/ui')
 const api = require('./game-api')
-// const userUi = require('../auth/ui')
 const ui = require('./game-ui')
 const getFormFields = require(`../../../lib/get-form-fields`)
-const game = require(`../game`)
-const table = require(`../table`)
 const logic = require('./logic-game')
 
 // creating table game and game in the database
@@ -14,26 +10,11 @@ const onCreateGame = function (event) {
   event.preventDefault()
   const data = {}
   $('#board-container').fadeIn()
-
   logic.printBoard()
-
-  // api.create(data)
-  // // if (signedInUser.signInSuccess() === true) {
-  // //   api.create(data)
-  // //   ui.onCreateSuccess()
-  // //   table.generateTable()
-  // // } else {
-  // //   game.signInPrompt()
-  // // }
-  // .then(ui.onCreateSuccess)
-  // // .then(table.generateTable())
-  // .catch(ui.onCreateFailure)
-  // // .catch(game.signInPrompt())
 }
 
 const onIndexGame = function (event) {
   event.preventDefault()
-  console.log('onIndexGame ran!')
 
   api.index()
     .then(ui.onIndexSuccess)
@@ -82,6 +63,18 @@ const onUpdateGame = function (event) {
   }
 }
 
+const addHandlers = () => {
+  $('#game-create').on('click', onCreateGame)
+  $('#game-reset').on('click', logic.resetGame)
+  $('#game-index').on('submit', onIndexGame)
+  $('#game-show').on('submit', onShowGame)
+  $('#game-update').on('submit', onUpdateGame)
+}
+
+module.exports = {
+  addHandlers
+}
+
 // example code for clearing board:
 /*
 function clearBoard() {
@@ -92,18 +85,3 @@ $('.tile').html('');
 $('.tile').addClass('free');
 }
 */
-
-const addHandlers = () => {
-  console.log('events')
-  // $('#board-create').on('click', onCreateBoard)
-  $('#game-create').on('click', onCreateGame)
-  $('#game-reset').on('click', logic.resetGame)
-  // $('#show-games').on('click', logic.showGames)
-  $('#game-index').on('submit', onIndexGame)
-  $('#game-show').on('submit', onShowGame)
-  $('#game-update').on('submit', onUpdateGame)
-}
-
-module.exports = {
-  addHandlers
-}
