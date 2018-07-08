@@ -48,78 +48,83 @@
     </header>
     <div id="game-options" class="col-md-4" style="display: none">
       <ul>
-        <li><a id="game-create" href="#">Create new game</a></li>
-        <li><a id="game-reset" href="#">Reset game</a></li>
+        <li>
+          <a id="game-create" href="#">Create New Game</a>
+        </li>
+        <li>
+          <a id="game-reset" href="#">Reset game</a>
+        </li>
         <!-- <li><a id="show-games" href="#">Show games</a></li> -->
       </ul>
-      <br /><br />
+      <br />
+      <br />
       <div id="div-score">
-          <h5 class="font-16">Score board</h5>
-          <table class="table">
-            <tr><td><br /></td></tr>
-            <tr>
-              <td><a href="#">Player (x)</a><span id="score_x" class="label label-info pull-right">0</span></td>
-            </tr>
-            <tr>
-                <td><a href="#">Player (o)</a><span id="score_o" class="label label-info pull-right">0</span></td>
-            </tr>
+        <h5 class="font-16">Score board</h5>
+        <table class="table">
+          <tr>
+            <td>
+              <br />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="#">Player (x)</a>
+              <span id="score_x" class="label label-info pull-right">0</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="#">Player (o)</a>
+              <span id="score_o" class="label label-info pull-right">0</span>
+            </td>
+          </tr>
 
-            <tr>
-                <td><a href="#">Tie games</a><span id="tie-games" class="label label-warning pull-right">0</span></td>
-            </tr>
-          </table>
+          <tr>
+            <td>
+              <a href="#">Tie games</a>
+              <span id="tie-games" class="label label-warning pull-right">0</span>
+            </td>
+          </tr>
+        </table>
       </div>
     </div>
     <div id="board-container" class="col-md-8" style="display: none">
       <div class="board">
-        
+
       </div>
     </div>
 
     <div id=""></div>
 
-    <!-- <article class="content">
-      <div class="game table-container" id="game-div">
-      </div>
-
-      <div> 
-        <button id="game-create">New Game</button>
-      </div>
-    </article>
-    <div> -->
-
     <!-- Create  the modals for sign-up, sign-in, change psw, and sign out-->
     <!-- Sign Up Modal -->
-    <div class="container">
-      <div class="modal fade" id="signUpModal" role="dialog">
-        <div class="modal-dialog">
+    <div class="modal fade" id="signUpModal" role="dialog">
+      <div class="modal-dialog">
 
-          <!-- Modal content-->
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
-              <h4 class="modal-title">Sign Up</h4>
-            </div>
-            <div class="modal-body">
-              <!-- form#sign-up.border  -->
-              <form class="border" id="sign-up">
-                <fieldset>
-                  <legend>Sign up!</legend>
-                  <input type="text" name="credentials[email]" placeholder="Email">
-                  <input type="password" name="credentials[password]" placeholder="Password">
-                  <input type="password" name="credentials[password_confirmation]" placeholder="Password Confirmation">
-                  <input type="submit" value="Sign up!">
-                </fieldset>
-              </form>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Sign Up</h4>
           </div>
-
+          <div class="modal-body">
+            <!-- form#sign-up.border  -->
+            <form class="border" id="sign-up">
+              <fieldset>
+                <legend>Sign up!</legend>
+                <input type="text" name="credentials[email]" placeholder="Email">
+                <input type="password" name="credentials[password]" placeholder="Password">
+                <input type="password" name="credentials[password_confirmation]" placeholder="Password Confirmation">
+                <input type="submit" value="Sign up!">
+              </fieldset>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
         </div>
-      </div>
 
+      </div>
     </div>
     <!-- Sign Up Modal ends here-->
 
@@ -153,7 +158,6 @@
     <!-- Sign In Modal ends here-->
 
     <!-- Change Password Modal -->
-    <div class="container">
       <div class="modal fade" id="changePwdModal" role="dialog">
         <div class="modal-dialog">
 
@@ -180,23 +184,22 @@
           </div>
         </div>
       </div>
-    </div>
+
     <!-- Change Password Modal ends here-->
 
     <!-- Sign Out Modal -->
-    <div class="container">
-      <div class="modal fade" id="signOutModal" role="dialog">
+      <!-- <div class="modal fade" id="signOutModal" role="dialog">
         <div class="modal-dialog">
 
           <!-- Modal content-->
-          <div class="modal-content">
+          <!-- <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal">&times;</button>
               <h4 class="modal-title">Are you sure you want to leave? Come Back Soon!</h4>
             </div>
             <div class="modal-body">
               <!-- form#change-pwd.border  -->
-              <form class="border" id="sign-out">
+              <!-- <form class="border" id="sign-out">
                 <fieldset>
                   <input type="submit" value="Sign Out">
                 </fieldset>
@@ -207,9 +210,9 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <!-- Change Password Modal ends here-->
+      </div> --> --> -->
+
+    <!-- Sign Out Modal ends here-->
   </div>
   </div>
   <!-- wrapper div ends here -->

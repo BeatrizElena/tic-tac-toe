@@ -1,3 +1,43 @@
+.board table {
+  background-color: $cornflower-blue;
+  border: 6px solid $darkslate-blue;
+  border-collapse: separate; // sets whether table borders should collapse into a single border or be separated as in standard HTML
+  border-radius: 10px;
+  box-sizing: border-box;
+  float: right;
+  font-family: Arial, sans-serif;
+  height: 100%;
+  margin: 30px, auto, 30px;
+  width: 90%;
+}
+
+tr {
+  align-items: center;
+  border: 6px solid $gainsboro;
+  box-sizing: border-box;
+  border-radius: 12px;
+}
+
+.board td {
+  align-items: center;
+  border: 6px solid $gainsboro;
+  border-radius: 12px;
+  box-sizing: border-box;
+  font-family: Helvetica;
+  font-size: 4em;
+  font-weight: bold;
+  height: 100px;
+  justify-content: center;
+  padding: 5px;
+  text-align: center;
+  width: 100px;
+}
+
+
+
+
+
+
 
 // Source grid code: https://codepen.io/shammadahmed/pen/JOWEGW  */
 // .game-board {
@@ -22,39 +62,3 @@
 //   font-weight: bold;
 //   justify-content: center;
 //   }
-
-table {
-  background-color: $cornflower-blue;
-  border: 6px solid $darkslate-blue;
-  border-collapse: collapse;
-  border-radius: 10px;
-  box-sizing: border-box;
-  float: right;
-  font-family: Arial, sans-serif;
-  height: 100%;
-  width: 100%;
-}
-
-tr {
-  align-items: center;
-  border: 6px solid $gainsboro;
-  box-sizing: border-box;
-  // border-radius: 12px;
-  // font-family: Helvetica;
-  // font-size: 4em;
-  // font-weight: bold;
-  // justify-content: center;
-  // padding: 5px;
-}
-
-td {
-  align-items: center;
-  border: 6px solid $gainsboro;
-  border-radius: 12px;
-  box-sizing: border-box;
-  font-family: Helvetica;
-  font-size: 4em;
-  font-weight: bold;
-  justify-content: center;
-  padding: 5px;
-}

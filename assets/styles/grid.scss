@@ -10,33 +10,6 @@
 // <div class="grid-container">
 // </div>
 
-
-.main-nav {
-  grid-area: nav;
-}
-
-.main-head {
-  grid-area: header;
-}
-
-.content {
-  grid-area: content;
-}
-
-.main-footer {
-  grid-area: footer;
-}
-
-.wrapper {
-  display: grid;
-  grid-gap: 20px;
-  grid-template-areas:
-  'nav'
-  'header'
-  'content'
-  'footer';
-}
-
 nav {
   background: $gainsboro;
 
@@ -66,50 +39,73 @@ p {
   text-align: center;
 }
 
-article {
-
-  div {
-
-    button {
-      background-color: $cornflower-blue;
-      color: $white;
-      float: right;
-    }
-  }
+button {
+  background-color: $cornflower-blue;
+  color: $white;
+  float: right;
 }
 
 
 
-@media (min-width: 500px) {
-  .wrapper {
-    grid-template-areas:
-    'nav'
-    'header'
-    'content'
-    'footer';
-    grid-template-columns: 1fr 3fr;
-  }
 
-  nav {
-    ul {
-      display: flex;
-      justify-content: space-between;
-    }
-  }
-}
-@media (min-width: 700px) {
-  .wrapper {
-    grid-template-areas:
-    'nav nav nav'
-    'header header  header'
-    'content    content content'
-    'footer footer  footer';
-    grid-template-columns: 1fr 4fr 1fr;
-   }
 
-  nav {
-    ul {
-      flex-direction: column;
-     }
-   }
-}
+
+// .main-nav {
+  //   grid-area: nav;
+  // }
+  
+  // .main-head {
+  //   grid-area: header;
+  // }
+  
+  // .content {
+  //   grid-area: content;
+  // }
+  
+  // .main-footer {
+  //   grid-area: footer;
+  // }
+  
+  // .wrapper {
+  //   display: grid;
+  //   grid-gap: 20px;
+  //   grid-template-areas:
+  //   'nav'
+  //   'header'
+  //   'content'
+  //   'footer';
+  // }
+
+  // @media (min-width: 500px) {
+  //   .wrapper {
+  //     grid-template-areas:
+  //     'nav'
+  //     'header'
+  //     'content'
+  //     'footer';
+  //     grid-template-columns: 1fr 3fr;
+  //   }
+  
+  //   nav {
+  //     ul {
+  //       display: flex;
+  //       justify-content: space-between;
+  //     }
+  //   }
+  // }
+  // @media (min-width: 700px) {
+  //   .wrapper {
+  //     grid-template-areas:
+  //     'nav nav nav'
+  //     'header header  header'
+  //     'content    content content'
+  //     'footer footer  footer';
+  //     grid-template-columns: 1fr 4fr 1fr;
+  //    }
+  
+  //   nav {
+  //     ul {
+  //       flex-direction: column;
+  //      }
+  //    }
+  // }
