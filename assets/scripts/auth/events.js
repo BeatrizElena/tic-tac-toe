@@ -24,14 +24,14 @@ const onSignIn = function (event) {
   const data = getFormFields(this)
   console.log(data) // for testing what 'this' is in parameter above
   api.signIn(data)
-    .then(ui.signInSuccess, store.user = data.user, $('#signInModal, .modal-backdrop').hide(), $('#game-options').fadeIn())
+    .then(ui.signInSuccess, store.user = data.user, $('#signInModal, .modal-backdrop').hide(), $('#game-options').fadeIn(), $('.dropdown').fadeIn())
     .catch(ui.signInFailure)
 }
 
 const onSignOut = function (event) {
   event.preventDefault()
-  api.signOut()
-    .then(ui.signOutSuccess)
+  api.signOut(data)
+    .then(ui.signOutSuccess, $('#signOutModal, .modal-backdrop').hide(), $('.wrapper').hide(), store.user = null)
     .catch(ui.signOutFailure)
 }
 
@@ -42,14 +42,14 @@ const onChangePassword = function (event) {
   const data = getFormFields(this)
   console.log(data) // for testing what 'this' is in parameter above
   api.changePassword(data)
-    .then(ui.changePasswordSuccess, $('#message').fadeIn())
+    .then(ui.changePasswordSuccess, $('#changePwdModal, .modal-backdrop').hide(), $('#message').fadeIn())
     .catch(ui.changePasswordFailure)
 }
 
 const addHandlers = () => {
   $('#sign-up').on('submit', onSignUp)
   $('#sign-in').on('submit', onSignIn)
-  $('#sign-out').on('submit', onSignOut)
+  $('#sign-out').on('click', onSignOut)
   $('#change-password').on('submit', onChangePassword)
 }
 
