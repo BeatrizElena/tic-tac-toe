@@ -217,11 +217,10 @@ const resetSignInMessage = () => {
     }, 500);
 }
 
-// const backToGame = (event) => {
-//     $(".initial-view").load(location.href + " .initial-view");
+// const backToGame = () => {
+//     $(".initial-view").load(location.href + " .initial-view")
 //     // $('#sign-up').on('submit', user_events.onSignUp)
 //     // $('#sign-in').on('submit', user_events.onSignIn)
-//     // $(".initial-view").show()
 // }
 
 module.exports = {
@@ -229,5 +228,4 @@ module.exports = {
     resetGame,
     resetMessage,
     resetSignInMessage
-    // backToGame
 }

@@ -13,7 +13,7 @@ const onSignUp = function (event) {
   const data = getFormFields(this)
   console.log(data) // for testing what 'this' is in parameter above
   api.signUp(data)
-    .then(ui.signUpSuccess)
+    .then(ui.signUpSuccess, $('#signUpModal, .modal-backdrop').hide())
     .catch(ui.signUpFailure)
 }
 
@@ -30,8 +30,11 @@ const onSignIn = function (event) {
 
 const onSignOut = function (event) {
   event.preventDefault()
-  api.signOut(data)
-    .then(ui.signOutSuccess, $('#signOutModal, .modal-backdrop').hide(), $('.wrapper').hide(), store.user = null)
+  api.signOut()
+    .then(ui.signOutSuccess, 
+      $('#sign-out, #change, .modal-backdrop').hide(), 
+      $('.wrapper').hide(),
+      $('.initial-view').load(location.href + " .initial-view"))
     .catch(ui.signOutFailure)
 }
 
