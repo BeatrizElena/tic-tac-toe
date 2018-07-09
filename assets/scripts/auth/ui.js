@@ -24,8 +24,14 @@ const signInSuccess = function (data) {
 const signOutSuccess = function (data) {
   $('#message').text('Signed out successfully')
   $('#message').css('color', 'white')
-  $('#sign-out, #change, .modal-backdrop').hide(), 
+  $('.signout-message').text('')
+  $('.signout').trigger('reset')
+  $('.signout').hide()
+  $('.dropdown').hide()
   $('.wrapper').hide()
+  $('#user-email').text(''), store.user = null
+  // $('.initial-view').fadeIn()
+  $(".initial-view").load(location.href + " .initial-view")
   console.log(`signOutSuccess ran.`)
 }
 

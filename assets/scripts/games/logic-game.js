@@ -196,9 +196,12 @@ const resetGame = () => {
     game = {};
     data = {};
     moves = 0;
+    score_x = 0
+    score_o = 0
+    tie = 0
     setTimeout(function () {
         $('.board').empty();
-    }, 3000);
+    }, 1000);
 
 }
 
@@ -207,13 +210,13 @@ const resetMessage = () => {
     data = {};
     moves = 0;
     setTimeout(function () {
-        $('#message').empty();
+        $('#message').fadeOut();
     }, 2000);
 }
 
 const resetSignInMessage = () => {
     setTimeout(function () {
-        $('.initial-view').empty();
+        $('.initial-view').fadeOut();
     }, 500);
 }
 
