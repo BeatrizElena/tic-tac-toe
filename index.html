@@ -23,16 +23,16 @@
             </a>
             <ul class="dropdown-menu">
               <li>
-                <button type="button" id="change" class="btn btn-info btn-sm" data-toggle="modal" data-target="#changePwdModal">Change Password</button>
+                <button type="button" id="changePass" class="btn btn-info btn-sm" data-toggle="modal" data-target="#changePwdModal">Change Password</button>
               </li>
               <li>
 
-                  <form class="border" id="sign-out">
-                      <fieldset>
-                        <input type="submit" value="Sign Out">
-                      </fieldset>
-                    </form>
-                    
+                <form class="border" id="sign-out">
+                  <fieldset>
+                    <input type="submit" value="Sign Out">
+                  </fieldset>
+                </form>
+
               </li>
               <!-- <li>
                   <form id="game-show" class="border">
@@ -48,13 +48,14 @@
         </ul>
       </div>
       <!-- /.navbar-collapse -->
-    </div> <!-- end /.container-fluid -->
+    </div>
+    <!-- end /.container-fluid -->
   </nav>
 
   <div class="initial-view">
-      <h6>Sign In to play and save your games!</h6>
-      <button id="signup-btn" type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#signUpModal">Sign Up</button>
-      <button id="signin-btn" type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#signInModal">Sign In</button>
+    <h6>Sign In to play and save your games!</h6>
+    <button id="signup-btn" type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#signUpModal">Sign Up</button>
+    <button id="signin-btn" type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#signInModal">Sign In</button>
   </div>
 
 
@@ -101,7 +102,7 @@
         </table>
       </div>
       <header class="main-head">
-          <p class="color-white" id="message"></p>
+        <p class="color-white" id="message"></p>
       </header>
     </div>
     <div id="board-container" class="col-md-8" style="display: none">
@@ -120,97 +121,97 @@
 
 
 
-    <!-- Create  the modals for sign-up, sign-in, and change psw-->
-    <!-- Sign Up Modal -->
-    <div class="modal fade" id="signUpModal" role="dialog">
-      <div class="modal-dialog">
+      <!-- Create  the modals for sign-up, sign-in, and change psw-->
+      <!-- Sign Up Modal -->
+      <div class="modal fade" id="signUpModal" role="dialog">
+        <div class="modal-dialog">
 
-        <!-- Modal content-->
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Sign Up</h4>
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Sign Up</h4>
+            </div>
+            <div class="modal-body">
+              <!-- form#sign-up.border  -->
+              <form class="border" id="sign-up">
+                <fieldset>
+                  <legend>Sign up!</legend>
+                  <input type="text" name="credentials[email]" placeholder="Email">
+                  <input type="password" name="credentials[password]" placeholder="Password">
+                  <input type="password" name="credentials[password_confirmation]" placeholder="Password Confirmation">
+                  <input type="submit" value="Sign up!">
+                </fieldset>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
           </div>
-          <div class="modal-body">
-            <!-- form#sign-up.border  -->
-            <form class="border" id="sign-up">
-              <fieldset>
-                <legend>Sign up!</legend>
-                <input type="text" name="credentials[email]" placeholder="Email">
-                <input type="password" name="credentials[password]" placeholder="Password">
-                <input type="password" name="credentials[password_confirmation]" placeholder="Password Confirmation">
-                <input type="submit" value="Sign up!">
-              </fieldset>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
-        </div>
 
-      </div>
-    </div>
-    <!-- Sign Up Modal ends here-->
-
-    <!-- Sign In Modal -->
-    <div class="modal fade" id="signInModal" role="dialog">
-      <div class="modal-dialog">
-
-        <!-- Modal content-->
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Sign In</h4>
-          </div>
-          <div class="modal-body">
-            <!-- form#sign-up.border  -->
-            <form class="border" id="sign-in">
-              <fieldset>
-                <legend>Sign in</legend>
-                <input type="text" name="credentials[email]" placeholder="Email">
-                <input type="password" name="credentials[password]" placeholder="Password">
-                <input type="submit" value="Sign in">
-              </fieldset>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
         </div>
       </div>
-    </div>
-    <!-- Sign In Modal ends here-->
+      <!-- Sign Up Modal ends here-->
 
-    <!-- Change Password Modal -->
-    <div class="modal fade" id="changePwdModal" role="dialog">
-      <div class="modal-dialog">
+      <!-- Sign In Modal -->
+      <div class="modal fade" id="signInModal" role="dialog">
+        <div class="modal-dialog">
 
-        <!-- Modal content-->
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Change Password</h4>
-          </div>
-          <div class="modal-body">
-            <!-- form#change-pwd.border  -->
-            <form class="border" id="change-password">
-              <fieldset>
-                <legend>Change Password</legend>
-                <input type="password" name="passwords[old]" placeholder="Old-Password">
-                <input type="password" name="passwords[new]" placeholder="New-Password">
-                <input type="submit" value="Change Password">
-              </fieldset>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Sign In</h4>
+            </div>
+            <div class="modal-body">
+              <!-- form#sign-up.border  -->
+              <form class="border" id="sign-in">
+                <fieldset>
+                  <legend>Sign in</legend>
+                  <input type="text" name="credentials[email]" placeholder="Email">
+                  <input type="password" name="credentials[password]" placeholder="Password">
+                  <input type="submit" value="Sign in">
+                </fieldset>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+      <!-- Sign In Modal ends here-->
 
-    <!-- Change Password Modal ends here-->
-  </div>
+      <!-- Change Password Modal -->
+      <div class="modal fade" id="changePwdModal" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Change Password</h4>
+            </div>
+            <div class="modal-body">
+              <!-- form#change-pwd.border  -->
+              <form class="border" id="change-password">
+                <fieldset>
+                  <legend>Change Password</legend>
+                  <input type="password" name="passwords[old]" placeholder="Old-Password">
+                  <input type="password" name="passwords[new]" placeholder="New-Password">
+                  <input type="submit" value="Change Password">
+                </fieldset>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Change Password Modal ends here-->
+    </div>
   </div>
   <!-- wrapper div ends here -->
 

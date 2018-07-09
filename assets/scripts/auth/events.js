@@ -36,9 +36,10 @@ const onSignOut = function (event) {
   event.preventDefault()
   api.signOut()
     .then(ui.signOutSuccess, 
-      $('#sign-out, #change, .modal-backdrop').hide(), 
+      $('#sign-out, .modal-backdrop, .dropdown').hide(), 
       $('.wrapper').hide(),
-      $('.initial-view').load(location.href + " .initial-view"))
+      $('.initial-view').fadeIn()
+    )
     .catch(ui.signOutFailure)
 }
 
