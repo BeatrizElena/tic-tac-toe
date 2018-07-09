@@ -54,8 +54,25 @@
 
   <div class="initial-view">
     <h6>Sign In to play and save your games!</h6>
-    <button id="signup-btn" type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#signUpModal">Sign Up</button>
-    <button id="signin-btn" type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#signInModal">Sign In</button>
+    <!-- form#sign-up.border  -->
+    <form class="border" id="sign-up">
+        <fieldset>
+          <legend>Sign up!</legend>
+          <input type="text" name="credentials[email]" placeholder="Email">
+          <input type="password" name="credentials[password]" placeholder="Password">
+          <input type="password" name="credentials[password_confirmation]" placeholder="Password Confirmation">
+          <input type="submit" value="Sign up!">
+        </fieldset>
+      </form>
+    <!-- form#sign-up.border  -->
+    <form class="border" id="sign-in">
+        <fieldset>
+          <legend>Sign in</legend>
+          <input type="text" name="credentials[email]" id="user-email" placeholder="Email">
+          <input type="password" name="credentials[password]" placeholder="Password">
+          <input type="submit" value="Sign in">
+        </fieldset>
+      </form>
   </div>
 
 
@@ -116,72 +133,7 @@
     <div>
 
 
-
-
-
-
-
-      <!-- Create  the modals for sign-up, sign-in, and change psw-->
-      <!-- Sign Up Modal -->
-      <div class="modal fade" id="signUpModal" role="dialog">
-        <div class="modal-dialog">
-
-          <!-- Modal content-->
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
-              <h4 class="modal-title">Sign Up</h4>
-            </div>
-            <div class="modal-body">
-              <!-- form#sign-up.border  -->
-              <form class="border" id="sign-up">
-                <fieldset>
-                  <legend>Sign up!</legend>
-                  <input type="text" name="credentials[email]" placeholder="Email">
-                  <input type="password" name="credentials[password]" placeholder="Password">
-                  <input type="password" name="credentials[password_confirmation]" placeholder="Password Confirmation">
-                  <input type="submit" value="Sign up!">
-                </fieldset>
-              </form>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-          </div>
-
-        </div>
-      </div>
-      <!-- Sign Up Modal ends here-->
-
-      <!-- Sign In Modal -->
-      <div class="modal fade" id="signInModal" role="dialog">
-        <div class="modal-dialog">
-
-          <!-- Modal content-->
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
-              <h4 class="modal-title">Sign In</h4>
-            </div>
-            <div class="modal-body">
-              <!-- form#sign-up.border  -->
-              <form class="border" id="sign-in">
-                <fieldset>
-                  <legend>Sign in</legend>
-                  <input type="text" name="credentials[email]" id="user-email" placeholder="Email">
-                  <input type="password" name="credentials[password]" placeholder="Password">
-                  <input type="submit" value="Sign in">
-                </fieldset>
-              </form>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Sign In Modal ends here-->
-
+      <!-- Create  the modals for changing password->
       <!-- Change Password Modal -->
       <div class="modal fade" id="changePwdModal" role="dialog">
         <div class="modal-dialog">
