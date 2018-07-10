@@ -83,7 +83,7 @@ const mark = () => {
         $("#message2").text(`Player ${current_mark} won`);
 
         updateCell(game, index, current_mark, true)
-        resetMessage();
+        $("#message2").fadeOut(4000)
         resetGame();
     } else if (moves === Math.pow(size, 2)) {
         tie += 1;
@@ -92,6 +92,7 @@ const mark = () => {
         $("#message2").text('It is a Tie');
 
         updateCell(game, index, current_mark, true)
+        $("#message2").fadeOut(4000)
         resetGame();
     }
 
@@ -201,11 +202,8 @@ const resetGame = () => {
     score_x = 0
     score_o = 0
     tie = 0
-    setTimeout(function () {
-        $('.board').empty();
-        $("#message2").fadeOut()      
-    }, 2000);
-
+    // $("#message2").fadeOut(4000)
+    $('.board').empty();
 }
 
 const resetMessage = () => {

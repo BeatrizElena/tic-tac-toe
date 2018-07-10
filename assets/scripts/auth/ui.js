@@ -4,8 +4,9 @@ const store = require('../store')
 const logic = require('../games/logic-game')
 
 const signUpSuccess = function (data) {
-  $('#message').text('Signed up successfully')
+  $('#message').text('Signed up successfully. Please sign in.')
   $('#message').css('color', 'white')
+  $("#sign-up").hide()
   logic.resetMessage()
   console.log(`signUpSuccess ran. Data is: ${data}`)
 }
