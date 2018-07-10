@@ -15,6 +15,9 @@ const signInSuccess = function (data) {
   $('#message').css('color', 'white')
   // console.log(`signInSuccess ran. Data is: ${data}`)
   store.user = data.user
+  $('.wrapper').show()
+  $('#game-options').fadeIn()
+  $('.dropdown').fadeIn()
   logic.resetSignInMessage()
   logic.resetMessage()
   // console.log('signInSuccess ran. store.user is: ')
@@ -24,20 +27,20 @@ const signInSuccess = function (data) {
 const signOutSuccess = function (data) {
   $('#message').text('Signed out successfully')
   $('#message').css('color', 'white')
-  $('.signout-message').text('')
-  $('.signout').trigger('reset')
-  $('.signout').hide()
-  $('.dropdown').hide()
   $('.wrapper').hide()
-  $('#user-email').text(''), store.user = null
-  // $('.initial-view').fadeIn()
-  $(".initial-view").load(location.href + " .initial-view")
+  $('.dropdown').empty()
+  $('#user-email').text('')
+  store.user = null
+  $('.initial-view').fadeIn()
+  $("input[type=text], input[type=password], textarea").val("")
   console.log(`signOutSuccess ran.`)
 }
 
 const changePasswordSuccess = function (data) {
   $('#message').text('Changed password successfully')
   $('#message').css('color', 'white')
+  $('#changePwdModal, .modal-backdrop').hide(), 
+  $('#message').fadeIn()
   logic.resetMessage()
   // console.log(`changePasswordSuccess ran.`)
 }

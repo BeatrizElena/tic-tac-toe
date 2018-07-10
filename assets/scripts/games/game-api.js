@@ -33,7 +33,7 @@ const create = function () {
 
 const index = function () {
   return $.ajax({
-    url: config.apiUrl + '/games',
+    url: config.apiUrl + '/games?over=true',
     method: 'GET',
     headers: {
       Authorization: 'Token token=' + store.user.token

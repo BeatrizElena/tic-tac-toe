@@ -13,8 +13,7 @@ const onSignUp = function (event) {
   const data = getFormFields(this)
   console.log(data) // for testing what 'this' is in parameter above
   api.signUp(data)
-    .then(ui.signUpSuccess, 
-      $('#signUpModal, .modal-backdrop').hide())
+    .then(ui.signUpSuccess)
     .catch(ui.signUpFailure)
 }
 
@@ -25,17 +24,14 @@ const onSignIn = function (event) {
   const data = getFormFields(this)
   console.log(data) // for testing what 'this' is in parameter above
   api.signIn(data)
-    .then(ui.signInSuccess, store.user = data.user, 
-      $('#signInModal, .modal-backdrop').hide(), 
-      $('#game-options').fadeIn(), 
-      $('.dropdown').fadeIn())
+    .then(ui.signInSuccess)
     .catch(ui.signInFailure)
 }
 
 const onSignOut = function (event) {
   event.preventDefault()
   api.signOut()
-    .then(ui.signOutSuccess, store.user = null)
+    .then(ui.signOutSuccess)
     .catch(ui.signOutFailure)
 }
 
@@ -46,9 +42,7 @@ const onChangePassword = function (event) {
   const data = getFormFields(this)
   console.log(data) // for testing what 'this' is in parameter above
   api.changePassword(data)
-    .then(ui.changePasswordSuccess, 
-      $('#changePwdModal, .modal-backdrop').hide(), 
-      $('#message').fadeIn())
+    .then(ui.changePasswordSuccess)
     .catch(ui.changePasswordFailure)
 }
 

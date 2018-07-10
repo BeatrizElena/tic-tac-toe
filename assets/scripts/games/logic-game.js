@@ -79,17 +79,19 @@ const mark = () => {
             score_o += 1;
             $("#score_o").text(score_o);
         }
+        
+        $("#message2").text(`Player ${current_mark} won`);
 
-        $("#message").text(`Player ${current_mark} won`);
         updateCell(game, index, current_mark, true)
         resetMessage();
         resetGame();
     } else if (moves === Math.pow(size, 2)) {
         tie += 1;
         $("#tie-games").text(tie);
-        $("#message").text('It is a Tie');
+
+        $("#message2").text('It is a Tie');
+
         updateCell(game, index, current_mark, true)
-        resetMessage();
         resetGame();
     }
 
@@ -201,17 +203,18 @@ const resetGame = () => {
     tie = 0
     setTimeout(function () {
         $('.board').empty();
-    }, 1000);
+        $("#message2").fadeOut()      
+    }, 2000);
 
 }
 
 const resetMessage = () => {
-    game = {};
-    data = {};
-    moves = 0;
+    // game = {};
+    // data = {};
+    // moves = 0;
     setTimeout(function () {
         $('#message').fadeOut();
-    }, 2000);
+    }, 3000);
 }
 
 const resetSignInMessage = () => {
@@ -219,12 +222,6 @@ const resetSignInMessage = () => {
         $('.initial-view').fadeOut();
     }, 500);
 }
-
-// const backToGame = () => {
-//     $(".initial-view").load(location.href + " .initial-view")
-//     // $('#sign-up').on('submit', user_events.onSignUp)
-//     // $('#sign-in').on('submit', user_events.onSignIn)
-// }
 
 module.exports = {
     printBoard,
