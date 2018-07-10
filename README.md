@@ -26,7 +26,6 @@ This game is an individual project that has as its main requirements:
 - HTML5
 - SCSS
 - Bootstrap
-- Markdown
 
 
 
@@ -34,25 +33,22 @@ This game is an individual project that has as its main requirements:
 
 _Planning Stage_
 
-In addition to creating a [wireframe](./tic-tac-toe-wireframe.pdf) and writing [user stories](./user-stories-jun21.png), I spent time reviewing lessons that dealt with areas of knowledge I felt I would need for the tic tac toe project. This included the [boggle challenge](https://git.generalassemb.ly/ga-wdi-boston/js-boggle-challenge) and [Authorization Tokens](https://git.generalassemb.ly/ga-wdi-boston/jquery-ajax-token-auth). I also took lots of notes on the requirements and created a draft schedule of what I would work on each day. And finally, for inspiration, I took a quick look around the web to get a sense of how others presented a tic tac toe game to the user.
+In addition to creating a [wireframe](./tic-tac-toe-wireframe.pdf) and writing [user stories](./user-stories-jun21.png), I spent time reviewing lessons which included the [boggle challenge](https://git.generalassemb.ly/ga-wdi-boston/js-boggle-challenge) and [Authorization Tokens](https://git.generalassemb.ly/ga-wdi-boston/jquery-ajax-token-auth). I also took lots of notes on the requirements and created a draft schedule of what I would work on each day. And finally, for inspiration, I took a quick look around the web to get a sense of how others presented a tic tac toe game to the user.
 
 _Working Process_
 
-The project started with a template that, once npm install was ran, allowed our project to have access to tests, linters, and a grunt server. My initial steps were to authenticate the user. I then started to work on the switchPlayer function which allows for players of "X"s and "O"s to take turns and it also checks for winning patterns. Once a winner is determined, the game board becomes unclickable.
+The project started with a template that, once npm install was ran, allowed our project to have access to tests, linters, and a grunt server. My initial steps were to authenticate the user. After creating a game board using grids, I then started to work on the switchPlayer function which allows for players of "X"s and "O"s to take turns and it also checks for winning patterns. Once a winner is determined, the game board becomes unclickable.
 
 After the functionality above was tested, I updated the  switchPlayer function to check if user is signed-in. If not, user is prompted to sign in. If user is already signed-in, she is allowed to play.
 
 Tic-tac-toe is a complex project in terms of understanding how to interact with the DOM, how to communicate with an API that has less than ideal documentation, how to integrate HTML and SASS/SCSS, and how to see the connection between the different files that keep the code modular.
 
-As a developer in training, it was an opportunity to experiment with different ways of working, both alone and in study groups. It was also a good way of bringing home the concept of MVP - I may have started with grand ideas about all the features I wanted the game to have, but soon learned to focus on the minimal requirements.
+As a developer in training, it was an opportunity to experiment with different ways of working, both alone and in study groups. It was also a good way of practicing the concept of MVP - I may have started with grand ideas about all the features I wanted the game to have, but soon learned to focus on the minimal requirements.
 
 And finally, it was an exercise in finding ways to take care of self, so the frustrations of broken code, git stumbles, and rabbit holes were managed so they didn't interfere with being able to submit by the deadline.
 
 _Unsolved Problems / Future Additions_
 
-There are other actions to take in communicating with the server that I will work on. They are:
-
-1. Updating a game by storing new moves.
-2. Visually displaying the results of retrieving game statistics, such as total games won by a user.
-3. Styling the page to be visually appealing and easy to use.
-4. Revising the modals so they close automatically after all inputs are completed.
+1. Styling the page to be visually appealing and easier to navigate.
+2. Working on smoother transitions between visible and hidden elements.
+3. Fixing some instability on messages showing winner or tie. 
