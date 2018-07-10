@@ -202,7 +202,7 @@ const resetGame = () => {
     score_x = 0
     score_o = 0
     tie = 0
-    // $("#message2").fadeOut(5000)
+    $("#message2").fadeOut(5000)
     $('.board').empty();
 }
 
